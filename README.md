@@ -1,4 +1,4 @@
- <!-- Space: TerraformModuleTemplate -->
+ <!-- Space: TerraformAwsKeyPair -->
 <!-- Title: Project -->
 
 <!--
@@ -15,17 +15,11 @@
 
   -->
 
-[![Latest Release](https://img.shields.io/github/release/hadenlabs/terraform-module-template)](https://github.com/hadenlabs/terraform-module-template/releases) [![Lint](https://img.shields.io/github/workflow/status/hadenlabs/terraform-module-template/lint-code)](https://github.com/hadenlabs/terraform-module-template/actions?workflow=lint-code) [![CI](https://img.shields.io/github/workflow/status/hadenlabs/terraform-module-template/ci)](https://github.com/hadenlabs/terraform-module-template/actions?workflow=ci) [![Test](https://img.shields.io/github/workflow/status/hadenlabs/terraform-module-template/test)](https://github.com/hadenlabs/terraform-module-template/actions?workflow=test) [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit) [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow)](https://conventionalcommits.org) [![KeepAChangelog](https://img.shields.io/badge/Keep%20A%20Changelog-1.0.0-%23E05735)](https://keepachangelog.com)
+[![Latest Release](https://img.shields.io/github/release/hadenlabs/terraform-aws-key-pair)](https://github.com/hadenlabs/terraform-aws-key-pair/releases) [![Lint](https://img.shields.io/github/workflow/status/hadenlabs/terraform-aws-key-pair/lint-code)](https://github.com/hadenlabs/terraform-aws-key-pair/actions?workflow=lint-code) [![CI](https://img.shields.io/github/workflow/status/hadenlabs/terraform-aws-key-pair/ci)](https://github.com/hadenlabs/terraform-aws-key-pair/actions?workflow=ci) [![Test](https://img.shields.io/github/workflow/status/hadenlabs/terraform-aws-key-pair/test)](https://github.com/hadenlabs/terraform-aws-key-pair/actions?workflow=test) [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit) [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow)](https://conventionalcommits.org) [![KeepAChangelog](https://img.shields.io/badge/Keep%20A%20Changelog-1.0.0-%23E05735)](https://keepachangelog.com)
 
-# terraform-module-template
+# terraform-aws-key-pair
 
-terraform-module-template for project
-
-### Replace name project to New Project
-
-```bash
-  agr 'terraform-module-template' 'new-project'
-```
+terraform-aws-key-pair for project
 
 ## Requirements
 
@@ -40,7 +34,7 @@ This is a list of plugins that need to be installed previously to enjoy all the 
 
 ```hcl
   module "main" {
-    source  = "hadenlabs/terraform-module-template/aws"
+    source  = "hadenlabs/key-pair/aws"
     version = "0.0.0"
   }
 ```
@@ -53,7 +47,7 @@ Full working examples can be found in [examples](./examples) folder.
 
 ```hcl
   module "main" {
-    source  = "hadenlabs/terraform-module-template/aws"
+    source  = "hadenlabs/key-pair/aws"
     version = "0.0.0"
 
   }
@@ -93,13 +87,13 @@ No outputs.
 
 **Got a question?**
 
-File a GitHub [issue](https://github.com/hadenlabs/terraform-module-template/issues).
+File a GitHub [issue](https://github.com/hadenlabs/terraform-aws-key-pair/issues).
 
 ## Contributing
 
 ### Bug Reports & Feature Requests
 
-Please use the [issue tracker](https://github.com/hadenlabs/terraform-module-template/issues) to report any bugs or file feature requests.
+Please use the [issue tracker](https://github.com/hadenlabs/terraform-aws-key-pair/issues) to report any bugs or file feature requests.
 
 ### Development
 
@@ -141,6 +135,6 @@ All other trademarks referenced herein are the property of their respective owne
 
 The code and styles are licensed under the LGPL-3.0 license [See project license.](LICENSE).
 
-## Don't forget to 🌟 Star 🌟 the repo if you like terraform-module-template
+## Don't forget to 🌟 Star 🌟 the repo if you like terraform-aws-key-pair
 
-[Your feedback is appreciated](https://github.com/hadenlabs/terraform-module-template/issues)
+[Your feedback is appreciated](https://github.com/hadenlabs/terraform-aws-key-pair/issues)
