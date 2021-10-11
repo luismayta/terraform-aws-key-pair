@@ -21,7 +21,7 @@ func Key() FakeKey {
 }
 
 var (
-	names = []string{"Optimus-Prime", "Wheeljack", "Bumblebee"}
+	names = []string{"OptimusPrime", "Wheeljack", "Bumblebee"}
 )
 
 func (n fakeKey) Name() string {
