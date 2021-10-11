@@ -21,9 +21,15 @@ No resources.
 
 ## Inputs
 
-No inputs.
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_name"></a> [name](#input\_name) | name of key pair, e.g. 'key-1' or 'key-2' | `string` | n/a | yes |
+| <a name="input_public_key"></a> [public\_key](#input\_public\_key) | public key | `string` | n/a | yes |
+| <a name="input_tags"></a> [tags](#input\_tags) | tags (e.g. `map('BusinessUnit','XYZ')` | `map(string)` | `{}` | no |
 
 ## Outputs
 
-No outputs.
+| Name | Description |
+|------|-------------|
+| <a name="output_instance"></a> [instance](#output\_instance) | key\_pair of instance. |
 <!-- END_TF_DOCS -->
