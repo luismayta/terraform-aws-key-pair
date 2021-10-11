@@ -1,5 +1,7 @@
- <!-- Space: TerraformAwsKeyPair -->
-<!-- Title: Project -->
+ <!-- Space: TerraformAwsKeyPair --> 
+<!-- Title: Project --> 
+
+
 
 <!--
 
@@ -15,13 +17,28 @@
 
   -->
 
-[![Latest Release](https://img.shields.io/github/release/hadenlabs/terraform-aws-key-pair)](https://github.com/hadenlabs/terraform-aws-key-pair/releases) [![Lint](https://img.shields.io/github/workflow/status/hadenlabs/terraform-aws-key-pair/lint-code)](https://github.com/hadenlabs/terraform-aws-key-pair/actions?workflow=lint-code) [![CI](https://img.shields.io/github/workflow/status/hadenlabs/terraform-aws-key-pair/ci)](https://github.com/hadenlabs/terraform-aws-key-pair/actions?workflow=ci) [![Test](https://img.shields.io/github/workflow/status/hadenlabs/terraform-aws-key-pair/test)](https://github.com/hadenlabs/terraform-aws-key-pair/actions?workflow=test) [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit) [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow)](https://conventionalcommits.org) [![KeepAChangelog](https://img.shields.io/badge/Keep%20A%20Changelog-1.0.0-%23E05735)](https://keepachangelog.com)
+
+ [![Latest Release](https://img.shields.io/github/release/hadenlabs/terraform-aws-key-pair)](https://github.com/hadenlabs/terraform-aws-key-pair/releases) [![Lint](https://img.shields.io/github/workflow/status/hadenlabs/terraform-aws-key-pair/lint-code)](https://github.com/hadenlabs/terraform-aws-key-pair/actions?workflow=lint-code) [![CI](https://img.shields.io/github/workflow/status/hadenlabs/terraform-aws-key-pair/ci)](https://github.com/hadenlabs/terraform-aws-key-pair/actions?workflow=ci) [![Test](https://img.shields.io/github/workflow/status/hadenlabs/terraform-aws-key-pair/test)](https://github.com/hadenlabs/terraform-aws-key-pair/actions?workflow=test) [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit) [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow)](https://conventionalcommits.org) [![KeepAChangelog](https://img.shields.io/badge/Keep%20A%20Changelog-1.0.0-%23E05735)](https://keepachangelog.com)
 
 # terraform-aws-key-pair
 
-terraform-aws-key-pair for project
+
+
+
+terraform-aws-key-pair for project 
+
+
+
+
+
+
+
+
+
+
 
 ## Requirements
+
 
 This is a list of plugins that need to be installed previously to enjoy all the goodies of this configuration:
 
@@ -30,16 +47,30 @@ This is a list of plugins that need to be installed previously to enjoy all the 
 - [python](https://www.python.org)
 - [taskfile](https://github.com/go-task/task)
 
+
+
+
+
 ## Usage
 
 ```hcl
   module "main" {
     source  = "hadenlabs/key-pair/aws"
     version = "0.0.0"
+    name       = "name of key pair"
+    tags       = {
+      "key": "value"
+    }
+    public_key = "filename public key"
   }
 ```
 
 Full working examples can be found in [examples](./examples) folder.
+
+
+
+
+
 
 ## Examples
 
@@ -53,17 +84,21 @@ Full working examples can be found in [examples](./examples) folder.
   }
 ```
 
- <!-- BEGIN_TF_DOCS -->
 
+
+ <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
-| Name                                                                     | Version |
-| ------------------------------------------------------------------------ | ------- |
-| <a name="requirement_terraform"></a> [terraform](#requirement_terraform) | >= 0.13 |
+| Name | Version |
+|------|---------|
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 0.13 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >=3.2.0 |
 
 ## Providers
 
-No providers.
+| Name | Version |
+|------|---------|
+| <a name="provider_aws"></a> [aws](#provider\_aws) | >=3.2.0 |
 
 ## Modules
 
@@ -71,17 +106,28 @@ No modules.
 
 ## Resources
 
-No resources.
+| Name | Type |
+|------|------|
+| [aws_key_pair.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/key_pair) | resource |
 
 ## Inputs
 
-No inputs.
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_name"></a> [name](#input\_name) | name of key pair, e.g. 'key-1' or 'key-2' | `string` | n/a | yes |
+| <a name="input_public_key"></a> [public\_key](#input\_public\_key) | public key | `string` | n/a | yes |
+| <a name="input_tags"></a> [tags](#input\_tags) | tags (e.g. `map('BusinessUnit','XYZ')` | `map(string)` | `{}` | no |
 
 ## Outputs
 
-No outputs.
-
+| Name | Description |
+|------|-------------|
+| <a name="output_instance"></a> [instance](#output\_instance) | key\_pair of instance. |
 <!-- END_TF_DOCS -->
+
+
+
+
 
 ## Help
 
@@ -89,11 +135,14 @@ No outputs.
 
 File a GitHub [issue](https://github.com/hadenlabs/terraform-aws-key-pair/issues).
 
+
 ## Contributing
 
 ### Bug Reports & Feature Requests
 
+
 Please use the [issue tracker](https://github.com/hadenlabs/terraform-aws-key-pair/issues) to report any bugs or file feature requests.
+
 
 ### Development
 
@@ -106,7 +155,10 @@ In general, PRs are welcome. We follow the typical "fork-and-pull" Git workflow.
 
 5.  Submit a **Pull Request** so that we can review your changes
 
+
+
 **NOTE:** Be sure to rebase the latest changes from "upstream" before making a pull request!
+
 
 ## Module Versioning
 
@@ -120,21 +172,37 @@ Using the given version number of `MAJOR.MINOR.PATCH`, we apply the following co
 
 ### Backwards compatibility in `0.0.z` and `0.y.z` version
 
-- In the context of initial development, backwards compatibility in versions `0.0.z` is **not guaranteed** when `z` is increased. (Initial development)
-- In the context of pre-release, backwards compatibility in versions `0.y.z` is **not guaranteed** when `y` is increased. (Pre-release)
+- In the context of initial development, backwards compatibility in versions `0.0.z` is **not guaranteed** when `z` is
+  increased. (Initial development)
+- In the context of pre-release, backwards compatibility in versions `0.y.z` is **not guaranteed** when `y` is
+  increased. (Pre-release)
+
+
+
 
 ## Copyright
 
 Copyright © 2018-2021 [Hadenlabs](https://hadenlabs.com)
 
+
+
 ## Trademarks
 
 All other trademarks referenced herein are the property of their respective owners.
+
+
+
+
+
 
 ## License
 
 The code and styles are licensed under the LGPL-3.0 license [See project license.](LICENSE).
 
+
+
 ## Don't forget to 🌟 Star 🌟 the repo if you like terraform-aws-key-pair
 
+
 [Your feedback is appreciated](https://github.com/hadenlabs/terraform-aws-key-pair/issues)
+
