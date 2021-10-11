@@ -5,17 +5,22 @@ import (
 
 	"github.com/gruntwork-io/terratest/modules/terraform"
 
-	"github.com/hadenlabs/terraform-aws-key-pair/config"
 	"github.com/stretchr/testify/assert"
+
+	"github.com/hadenlabs/terraform-aws-key-pair/config"
+	"github.com/hadenlabs/terraform-aws-key-pair/internal/app/external/faker"
 	"github.com/hadenlabs/terraform-aws-key-pair/internal/common/log"
 )
 
 func Test{{pascalCase testName}}Success(t *testing.T) {
 	t.Parallel()
 	conf := config.Must()
+	name := faker.Key().Name()
+	publicKey := "../fixtures/keys/testing.pub"
 	logger := log.Factory(*conf)
 	logger.Debugf(
 		"values for test terraform-aws-key-pair is",
+		"name", name,
 	)
 
 	terraformOptions := &terraform.Options{
@@ -23,6 +28,8 @@ func Test{{pascalCase testName}}Success(t *testing.T) {
         TerraformDir: "key-{{dashCase testName}}",
 		Upgrade:      true,
 		Vars: map[string]interface{}{
+			"name":       name,
+			"public_key": publicKey,
 		},
 	}
 
