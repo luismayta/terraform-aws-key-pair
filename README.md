@@ -96,6 +96,7 @@ No modules.
 | Name                                                        | Description           |
 | ----------------------------------------------------------- | --------------------- |
 | <a name="output_instance"></a> [instance](#output_instance) | key_pair of instance. |
+| <a name="output_name"></a> [name](#output_name)             | name of key_pair.     |
 
 <!-- END_TF_DOCS -->
 
