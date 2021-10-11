@@ -1,3 +1,6 @@
 module "main" {
-  source = "../.."
+  source     = "../.."
+  name       = var.name
+  tags       = var.tags
+  public_key = var.public_key
 }
