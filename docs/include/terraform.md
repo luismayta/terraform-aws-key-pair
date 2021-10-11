@@ -35,4 +35,5 @@ No modules.
 | Name | Description |
 |------|-------------|
 | <a name="output_instance"></a> [instance](#output\_instance) | key\_pair of instance. |
+| <a name="output_name"></a> [name](#output\_name) | name of key\_pair. |
 <!-- END_TF_DOCS -->
